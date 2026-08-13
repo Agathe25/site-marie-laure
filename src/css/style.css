@@ -1788,12 +1788,21 @@ a:hover {
   pointer-events: auto;
 }
 
+/* Responsive Photo Display Rules */
+.hero-photo-mobile {
+  display: none;
+}
+
+.hero-photo-desktop {
+  display: block;
+}
+
 /* RESPONSIVE BREAKPOINTS */
 @media (max-width: 1024px) {
   .hero-grid,
   .mon-approche-grid {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 2rem;
   }
   
   .pricing-grid {
@@ -1813,9 +1822,35 @@ a:hover {
     gap: 2.5rem;
   }
 
-  .hero-bg-corner-flower {
-    width: clamp(550px, 80vw, 850px);
-    transform: translate(30%, -25%);
+  .hero-photo-mobile {
+    display: block;
+    max-width: 270px;
+    margin: 1.8rem auto 2.2rem auto;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+  }
+
+  .hero-photo-desktop {
+    display: none;
+  }
+
+  .hero-photo-mobile .hero-bg-corner-flower {
+    position: absolute;
+    top: -24px !important;
+    right: -14px !important;
+    width: 210px !important;
+    height: auto !important;
+    transform: rotate(15deg) !important;
+    opacity: 0.9 !important;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .hero-photo-mobile .hero-photo-container {
+    position: relative;
+    z-index: 10;
+    border-radius: var(--radius-xl);
   }
 }
 
