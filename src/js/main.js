@@ -135,7 +135,7 @@ function initSmoothScroll() {
   }, { passive: true });
 }
 
-/* Faster Scroll-Driven Stem & Flower Growth Animation */
+/* Ultra Fast Scroll-Driven Stem & Flower Growth Animation */
 function initScrollStemAnimation() {
   const stemPath = document.getElementById('growingStemPath');
   const container = document.querySelector('.cheminement-growth-container');
@@ -146,21 +146,21 @@ function initScrollStemAnimation() {
   stemPath.style.strokeDashoffset = pathLength;
 
   const elements = [
-    { id: 'leaf1Group', progressThreshold: 0.12 },
-    { id: 'leaf2Group', progressThreshold: 0.25 },
-    { id: 'leaf3Group', progressThreshold: 0.40 },
-    { id: 'budGroup', progressThreshold: 0.58 },
-    { id: 'flowerGroup', progressThreshold: 0.75 }
+    { id: 'leaf1Group', progressThreshold: 0.08 },
+    { id: 'leaf2Group', progressThreshold: 0.16 },
+    { id: 'leaf3Group', progressThreshold: 0.25 },
+    { id: 'budGroup', progressThreshold: 0.35 },
+    { id: 'flowerGroup', progressThreshold: 0.45 } // Éclosion 100% complète très tôt !
   ];
 
   const handleScroll = () => {
     const rect = container.getBoundingClientRect();
     const windowHeight = window.innerHeight;
 
-    // Début de pousse quand le haut du conteneur atteint 85% de la hauteur de l'écran
-    const startY = windowHeight * 0.85;
-    // Vitesse accélérée : progression totale étalée sur une distance 2,5x plus courte
-    const totalDistance = (container.offsetHeight * 0.65) + (windowHeight * 0.15);
+    // Début de pousse dès que le conteneur approche à 90% de l'écran
+    const startY = windowHeight * 0.90;
+    // Progression ultra-rapide : la fleur s'épanouit entièrement sur 32% de la hauteur
+    const totalDistance = (container.offsetHeight * 0.32) + 40;
     const currentDistance = startY - rect.top;
 
     let progress = currentDistance / totalDistance;
