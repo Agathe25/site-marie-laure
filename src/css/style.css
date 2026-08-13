@@ -1876,16 +1876,45 @@ a:hover {
 }
 
 .blog-title-single-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   font-size: clamp(1.8rem, 3.2vw, 2.9rem);
-  white-space: nowrap;
+}
+
+.blog-title-line-1 {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.blog-title-line-2 {
+  display: inline-block;
 }
 
 @media (max-width: 991px) {
   .blog-title-single-line {
-    white-space: normal !important;
-    font-size: clamp(1.6rem, 5.5vw, 2.2rem) !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.15rem;
+    font-size: clamp(1.55rem, 5.2vw, 2.1rem) !important;
+  }
+
+  .blog-title-line-1 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    white-space: nowrap;
+  }
+
+  .blog-title-line-2 {
+    display: block;
     text-align: center;
-    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 0.15rem;
   }
 }
 
