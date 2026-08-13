@@ -1856,4 +1856,58 @@ a:hover {
     flex-direction: column;
     text-align: center;
   }
+
+  .section-title-with-flowers {
+    gap: 0.75rem;
+  }
+
+  .micro-flower-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .quote-card-image3 {
+    padding: 2.2rem 1.6rem;
+    min-height: auto;
+  }
+
+  .quote-content-text {
+    font-size: 1.55rem;
+  }
+
+  .blog-search-bar {
+    padding: 0.35rem 0.5rem 0.35rem 1rem;
+  }
+
+  .blog-search-bar input {
+    font-size: 0.92rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .formations-standalone-card {
+    padding: 1.8rem 1.2rem;
+  }
+
+  .tools-box {
+    padding: 2rem 1.2rem;
+  }
+
+  .article-card-translucent {
+    padding: 1.6rem 1rem !important;
+  }
 }
