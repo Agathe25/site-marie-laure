@@ -167,11 +167,9 @@
           <h3 class="mon-approche-subheading">Mon cheminement</h3>
 
           <div class="cheminement-growth-container">
-            <!-- Bloc Gauche (Partie 1 du récit de vie) -->
+            <!-- Bloc 1 : Premier paragraphe uniquement sous le titre -->
             <div class="cheminement-part-column part-left">
               <p><span style="font-weight: 400;">Dès l’enfance, de part mon histoire de vie, les traumas passés, je me suis <strong>questionnée</strong> sur <strong>le fonctionnement humain,</strong> les conflits, les souffrances, les peurs, les incompréhensions entre les individus… </span></p>
-              <p><span style="font-weight: 400;">Durant ces 30 dernières années, je me suis <strong>engagée passionnément</strong> dans des stages de <strong>développement personnel</strong> pour mieux saisir mes propres rouages et mieux appréhender ceux des autres. </span></p>
-              <p><span style="font-weight: 400;">Mon métier d'infirmière en soins palliatifs à Besançon a renforcé mon désir d’approfondir mes <strong>connaissances en psychologie.</strong> C’est ainsi que progressivement, l’élan de me former en <strong>accompagnement individuel</strong> s’est imposé à moi comme une <strong>évidence</strong>. </span></p>
             </div>
 
             <!-- Colonne Centrale (SVG Animé au Scroll : Graine en Haut -> Fleur Épanouie chevauchant la carte à cy=730) -->
@@ -189,54 +187,49 @@
                     opacity: 0;
                     transition: opacity 0.45s ease-out;
                   }
-                  .scroll-elem.revealed {
+                  .scroll-elem.visible {
                     opacity: 1;
                   }
                 </style>
 
-                <!-- 1. BASE SEED AT TOP (Graine en haut) -->
-                <g id="seed-base-top" class="scroll-elem revealed">
-                  <path d="M 90 18 C 92 10, 100 5, 104 2" class="stem-line" stroke-width="1.8" opacity="0.6"/>
-                  <ellipse cx="90" cy="32" rx="9" ry="14" class="seed-dot" transform="rotate(15, 90, 32)" />
+                <!-- Base vertical stem path with gentle wave -->
+                <path d="M 90,20 C 84,100 98,180 90,260 C 82,340 98,420 90,500 C 82,580 96,650 90,730" class="stem-line" id="growingStemPath" />
+
+                <!-- SEED / GRAINE EN HAUT (Affiche immédiatement au top de la tige cy=20) -->
+                <g class="scroll-elem visible" id="seedGroup">
+                  <circle cx="90" cy="20" r="10" class="seed-dot" />
+                  <path d="M 90,10 C 95,0 92,-10 96,-18" stroke="#75AB9F" stroke-width="2" stroke-linecap="round" />
                 </g>
 
-                <!-- 2. DESCENDING CONTINUOUS STEM (Tige sinueuse qui descend jusqu'à y=710) -->
-                <path id="growingStemPath" d="
-                  M 90 45
-                  C 95 80, 120 110, 115 160
-                  C 110 210, 65 240, 70 300
-                  C 75 360, 125 390, 115 460
-                  C 105 540, 75 620, 90 710
-                " class="stem-line" />
-
-                <!-- 3. STAGE 1: FIRST SPROUT -->
-                <g id="stage-sprout" class="scroll-elem">
-                  <path d="M 112 125 C 132 130, 138 145, 125 150 C 118 142, 114 132, 112 125 Z" class="leaf-path" />
-                  <path d="M 114 140 C 98 150, 90 162, 104 165 C 112 157, 114 148, 114 140 Z" class="leaf-path" />
-                  <circle cx="113" cy="133" r="3" class="flower-center" opacity="0.7"/>
+                <!-- FEUILLE 1 (cy=140) -->
+                <g class="scroll-elem" id="leaf1Group">
+                  <path d="M 90,140 C 120,110 150,120 155,145 C 130,160 105,150 90,140 Z" class="leaf-path" />
                 </g>
 
-                <!-- 4. STAGE 2: FLOWER BUD -->
-                <g id="stage-bud" class="scroll-elem">
-                  <path d="M 72 280 C 52 278, 45 290, 58 298 C 66 292, 70 285, 72 280 Z" class="leaf-path" />
-                  <path d="M 72 280 C 55 285, 50 315, 68 325 C 84 315, 80 285, 72 280 Z" class="bud-path" />
-                  <path d="M 72 280 C 65 290, 62 310, 68 325" stroke="#532675" stroke-width="1.5" fill="none"/>
-                  <circle cx="71" cy="290" r="3.5" class="flower-center" opacity="0.8"/>
+                <!-- FEUILLE 2 (cy=290) -->
+                <g class="scroll-elem" id="leaf2Group">
+                  <path d="M 90,290 C 60,260 30,270 25,295 C 50,310 75,300 90,290 Z" class="leaf-path" />
                 </g>
 
-                <!-- 5. STAGE 3: EXPANDING BLOOM -->
-                <g id="stage-blooming-bud" class="scroll-elem">
-                  <path d="M 118 420 C 138 425, 142 440, 130 445 C 123 437, 120 428, 118 420 Z" class="leaf-path" />
-                  <path d="M 117 435 C 135 450, 140 475, 122 480 C 112 468, 115 450, 117 435 Z" class="bud-path" />
-                  <path d="M 117 435 C 105 455, 92 475, 110 485 C 122 472, 119 452, 117 435 Z" class="bud-path" />
-                  <circle cx="117" cy="445" r="4" class="flower-center"/>
+                <!-- FEUILLE 3 (cy=450) -->
+                <g class="scroll-elem" id="leaf3Group">
+                  <path d="M 90,450 C 125,420 155,430 160,455 C 135,470 105,460 90,450 Z" class="leaf-path" />
                 </g>
 
-                <!-- 6. BOTTOM HARVEST: FULL BLOSSOM FLOWER OVERLAPPING FORMATIONS CARD TOP BORDER (cy = 730) -->
-                <g id="bottom-full-flower" class="scroll-elem">
-                  <g transform="translate(90, 730)">
+                <!-- BOURGEON (cy=590) -->
+                <g class="scroll-elem" id="budGroup">
+                  <path d="M 90,590 C 70,570 70,545 90,535 C 110,545 110,570 90,590 Z" class="bud-path" />
+                  <path d="M 82,590 C 75,598 70,605 72,612" stroke="#16A099" stroke-width="2" />
+                  <path d="M 98,590 C 105,598 110,605 108,612" stroke="#16A099" stroke-width="2" />
+                </g>
+
+                <!-- FLEUR ÉPANOUIE FINALE DE TITRE (cy=730) chevauchant élégamment le haut de la carte Formations -->
+                <g class="scroll-elem" id="flowerGroup">
+                  <g transform="translate(90, 730) scale(0.92)">
+                    <!-- 8 rounded petals forming symmetrical title flower -->
                     <g class="flower-bottom">
                       <path d="M 0,0 C -10,-18 -14,-36 0,-42 C 14,-36 10,-18 0,0 Z" />
+                      <path d="M 0,0 C 10,-14 22,-30 30,-23 C 30,-16 14,-4 0,0 Z" />
                       <path d="M 0,0 C 18,-10 36,-14 42,0 C 36,14 18,10 0,0 Z" />
                       <path d="M 0,0 C 10,18 14,36 0,42 C -14,36 -10,18 0,0 Z" />
                       <path d="M 0,0 C -18,10 -36,14 -42,0 C -36,-14 -18,-10 0,0 Z" />
@@ -258,8 +251,10 @@
               </svg>
             </div>
 
-            <!-- Bloc Droite (Partie 2 du récit de vie) -->
+            <!-- Bloc 2 : Tout le reste du texte après l'animation de fleur -->
             <div class="cheminement-part-column part-right">
+              <p><span style="font-weight: 400;">Durant ces 30 dernières années, je me suis <strong>engagée passionnément</strong> dans des stages de <strong>développement personnel</strong> pour mieux saisir mes propres rouages et mieux appréhender ceux des autres. </span></p>
+              <p><span style="font-weight: 400;">Mon métier d'infirmière en soins palliatifs à Besançon a renforcé mon désir d’approfondir mes <strong>connaissances en psychologie.</strong> C’est ainsi que progressivement, l’élan de me former en <strong>accompagnement individuel</strong> s’est imposé à moi comme une <strong>évidence</strong>. </span></p>
               <p><strong>Mon parcours professionnel</strong> est <strong>atypique</strong>: d’abord coiffeuse, éducatrice sportive, puis infirmière hospitalière durant 17 ans avec une spécialisation de 10 ans en soins palliatifs et <strong>aujourd’hui thérapeute psychopraticienne.</strong></p>
               <p><span style="font-weight: 400;">Tout au long de ma <strong>vie</strong>, sous différents aspects, mes <strong>choix</strong> ont été <strong>guidés</strong> par ce qui m’a toujours animée: <strong>être présente à l’autre</strong> dans <strong>la relation d’aide.</strong></span></p>
               <p><span style="font-weight: 400;">La découverte des modèles <a href="#lesmodeles" style="color: var(--accent-teal); font-weight: 700;">IFS</a> et <a href="#lesmodeles" style="color: var(--accent-teal); font-weight: 700;">IR</a> a été un <strong>tournant décisif</strong> dans ma carrière. Ces approches, <strong>alignées</strong> sur <strong>ma conception du soin</strong> d'accompagnement thérapeutique vers l'<strong>autonomie de la personne</strong>, m'ont fourni les outils nécessaires pour embrasser pleinement le métier de psychopraticienne. Je me suis investie dans ma propre thérapie, en parallèle d’un cursus professionnel en <a href="#lesmodeles" style="color: var(--accent-teal); font-weight: 700;">IR</a> et <a href="#lesmodeles" style="color: var(--accent-teal); font-weight: 700;">IFS</a> à Lyon et à Paris, affirmant <strong>mon engagement</strong> dans ce domaine.</span></p>
