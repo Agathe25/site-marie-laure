@@ -1837,15 +1837,7 @@ a:hover {
   }
 
   .hero-photo-mobile .hero-bg-corner-flower {
-    position: absolute;
-    top: -24px !important;
-    right: -14px !important;
-    width: 210px !important;
-    height: auto !important;
-    transform: rotate(15deg) !important;
-    opacity: 0.9 !important;
-    pointer-events: none;
-    z-index: 1;
+    display: none !important; /* Masque la fleur d'arrière-plan sur téléphone */
   }
 
   .hero-photo-mobile .hero-photo-container {
