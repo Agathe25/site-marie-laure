@@ -58,6 +58,13 @@
   padding: 0;
 }
 
+html, body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+}
+
 html {
   scroll-behavior: smooth;
   font-size: 16px;
@@ -71,10 +78,13 @@ body {
   font-weight: 400;
   line-height: 1.7;
   letter-spacing: -0.01em;
-  overflow-x: hidden;
-  position: relative;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+img, svg, video {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Typography Hierarchy */
@@ -627,13 +637,6 @@ a:hover {
   font-style: italic;
   color: #262327;
   margin-bottom: 1.75rem;
-  white-space: nowrap; /* Maintient strictly le titre sur une seule ligne */
-}
-
-@media (max-width: 1200px) {
-  .mon-approche-subheading {
-    white-space: normal;
-  }
 }
 
 /* Quote Card Box (Matching Image 3 Model & User Reference Screenshot) */
@@ -1816,7 +1819,35 @@ a:hover {
   }
 }
 
+.blog-title-single-line {
+  font-size: clamp(1.8rem, 3.2vw, 2.9rem);
+  white-space: nowrap;
+}
+
+@media (max-width: 991px) {
+  .blog-title-single-line {
+    white-space: normal !important;
+    font-size: clamp(1.6rem, 5.5vw, 2.2rem) !important;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+}
+
 @media (max-width: 768px) {
+  #lesmodeles::before,
+  #faq::before,
+  #faq::after,
+  #tarif::before {
+    display: none !important; /* Masque les grands filigranes sur téléphone pour éviter tout débordement */
+  }
+
+  .hero-bg-corner-flower {
+    width: 280px;
+    opacity: 0.35;
+    top: 0;
+    right: -60px;
+  }
+
   .main-nav {
     position: fixed;
     top: 0;
@@ -1858,12 +1889,13 @@ a:hover {
   }
 
   .section-title-with-flowers {
-    gap: 0.75rem;
+    gap: 0.5rem;
+    flex-wrap: wrap;
   }
 
   .micro-flower-icon {
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
   }
 
   .quote-card-image3 {
@@ -1872,7 +1904,7 @@ a:hover {
   }
 
   .quote-content-text {
-    font-size: 1.55rem;
+    font-size: 1.45rem;
   }
 
   .blog-search-bar {
@@ -1880,13 +1912,13 @@ a:hover {
   }
 
   .blog-search-bar input {
-    font-size: 0.92rem;
+    font-size: 0.9rem;
   }
 }
 
 @media (max-width: 480px) {
   .container {
-    padding: 0 1rem;
+    padding: 0 1.1rem;
   }
 
   .btn {
