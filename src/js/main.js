@@ -135,7 +135,7 @@ function initSmoothScroll() {
   }, { passive: true });
 }
 
-/* Scroll-Driven Stem & Flower Growth Animation (Animation ralentie pour s'étaler sur ~1200px de défilement) */
+/* Faster Scroll-Driven Stem & Flower Growth Animation */
 function initScrollStemAnimation() {
   const stemPath = document.getElementById('growingStemPath');
   const container = document.querySelector('.cheminement-growth-container');
@@ -146,21 +146,21 @@ function initScrollStemAnimation() {
   stemPath.style.strokeDashoffset = pathLength;
 
   const elements = [
-    { id: 'stage-sprout', progressThreshold: 0.25 },
-    { id: 'stage-bud', progressThreshold: 0.50 },
-    { id: 'stage-blooming-bud', progressThreshold: 0.75 },
-    { id: 'bottom-full-flower', progressThreshold: 0.92 }
+    { id: 'leaf1Group', progressThreshold: 0.12 },
+    { id: 'leaf2Group', progressThreshold: 0.25 },
+    { id: 'leaf3Group', progressThreshold: 0.40 },
+    { id: 'budGroup', progressThreshold: 0.58 },
+    { id: 'flowerGroup', progressThreshold: 0.75 }
   ];
 
   const handleScroll = () => {
     const rect = container.getBoundingClientRect();
     const windowHeight = window.innerHeight;
 
-    // Début à 80% de la hauteur d'écran
-    const startY = windowHeight * 0.80;
-    // Distance totale étalée sur la hauteur du container + marge importante (environ 1150px de scroll)
-    const containerHeight = container.offsetHeight;
-    const totalDistance = containerHeight + (windowHeight * 0.50);
+    // Début de pousse quand le haut du conteneur atteint 85% de la hauteur de l'écran
+    const startY = windowHeight * 0.85;
+    // Vitesse accélérée : progression totale étalée sur une distance 2,5x plus courte
+    const totalDistance = (container.offsetHeight * 0.65) + (windowHeight * 0.15);
     const currentDistance = startY - rect.top;
 
     let progress = currentDistance / totalDistance;
@@ -174,9 +174,9 @@ function initScrollStemAnimation() {
       if (!elem) return;
 
       if (progress >= item.progressThreshold) {
-        elem.classList.add('revealed');
+        elem.classList.add('visible');
       } else {
-        elem.classList.remove('revealed');
+        elem.classList.remove('visible');
       }
     });
   };
