@@ -783,8 +783,10 @@ a:hover {
   }
 
   .growth-stem-svg {
-    max-width: 120px;
-    height: 240px;
+    max-width: 150px;
+    height: auto;
+    min-height: 460px;
+    display: block !important;
   }
 
   .part-right {

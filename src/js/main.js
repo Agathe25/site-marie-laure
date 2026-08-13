@@ -165,7 +165,7 @@ function initSmoothScroll() {
   }, { passive: true });
 }
 
-/* Ultra Fast Scroll-Driven Stem & Flower Growth Animation */
+/* Scroll-Driven Stem & Flower Growth Animation (Smooth on Desktop & Fully Active on Mobile) */
 function initScrollStemAnimation() {
   const stemPath = document.getElementById('growingStemPath');
   const container = document.querySelector('.cheminement-growth-container');
@@ -176,21 +176,25 @@ function initScrollStemAnimation() {
   stemPath.style.strokeDashoffset = pathLength;
 
   const elements = [
-    { id: 'leaf1Group', progressThreshold: 0.08 },
-    { id: 'leaf2Group', progressThreshold: 0.16 },
-    { id: 'leaf3Group', progressThreshold: 0.25 },
-    { id: 'budGroup', progressThreshold: 0.35 },
-    { id: 'flowerGroup', progressThreshold: 0.45 } // Éclosion 100% complète très tôt !
+    { id: 'leaf1Group', progressThreshold: 0.18 },
+    { id: 'leaf2Group', progressThreshold: 0.38 },
+    { id: 'leaf3Group', progressThreshold: 0.58 },
+    { id: 'budGroup', progressThreshold: 0.76 },
+    { id: 'flowerGroup', progressThreshold: 0.88 }
   ];
 
   const handleScroll = () => {
     const rect = container.getBoundingClientRect();
     const windowHeight = window.innerHeight;
+    const isMobile = window.innerWidth < 992;
 
-    // Début de pousse dès que le conteneur approche à 90% de l'écran
-    const startY = windowHeight * 0.90;
-    // Progression ultra-rapide : la fleur s'épanouit entièrement sur 32% de la hauteur
-    const totalDistance = (container.offsetHeight * 0.32) + 40;
+    // Début de l'animation quand le haut du conteneur entre dans l'écran
+    const startY = windowHeight * (isMobile ? 0.85 : 0.75);
+    
+    // Sur ordinateur : progression douce et élégante étalée sur toute la hauteur
+    // Sur mobile : progression réactive adaptée au scroll tactile
+    const containerHeight = container.offsetHeight || 600;
+    const totalDistance = isMobile ? (containerHeight * 0.90) : (containerHeight + (windowHeight * 0.35));
     const currentDistance = startY - rect.top;
 
     let progress = currentDistance / totalDistance;
@@ -212,6 +216,7 @@ function initScrollStemAnimation() {
   };
 
   window.addEventListener('scroll', handleScroll, { passive: true });
+  window.addEventListener('resize', handleScroll, { passive: true });
   handleScroll();
 }
 
