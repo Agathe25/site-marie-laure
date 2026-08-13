@@ -1890,15 +1890,23 @@ a:hover {
     display: none !important; /* Masque les grands filigranes sur téléphone pour éviter tout débordement */
   }
 
+.hero-bg-corner-flower-desktop {
+  display: block;
+  position: absolute;
+  top: -130px;
+  right: -290px;
+  width: 750px;
+  height: auto;
+  opacity: 0.95;
+  pointer-events: none;
+  z-index: 1;
+}
+
 .hero-bg-corner-flower-mobile {
   display: none !important;
 }
 
-.hero-bg-corner-flower-desktop {
-  display: block;
-}
-
-@media (max-width: 1024px) {
+@media (max-width: 991px) {
   .hero-bg-corner-flower-desktop {
     display: none !important;
   }
