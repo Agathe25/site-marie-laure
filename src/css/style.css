@@ -1890,10 +1890,23 @@ a:hover {
     display: none !important; /* Masque les grands filigranes sur téléphone pour éviter tout débordement */
   }
 
-  .hero-bg-corner-flower {
+.hero-bg-corner-flower-mobile {
+  display: none !important;
+}
+
+.hero-bg-corner-flower-desktop {
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .hero-bg-corner-flower-desktop {
+    display: none !important;
+  }
+
+  .hero-bg-corner-flower-mobile {
     display: block !important;
     position: absolute !important;
-    top: 10.8rem !important; /* Le rond violet (cœur de la fleur) s'aligne parfaitement sur la même ligne que ACCOMPAGNEMENT THÉRAPEUTIQUE */
+    top: 10.8rem !important;
     right: -25px !important;
     width: 200px !important;
     height: auto !important;
@@ -1902,6 +1915,7 @@ a:hover {
     pointer-events: none;
     z-index: 1;
   }
+}
 
   .main-nav {
     position: fixed;
