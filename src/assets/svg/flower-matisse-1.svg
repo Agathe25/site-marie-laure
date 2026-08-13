@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" fill="none">
+  <!-- Single Large Petal Matisse Flower based on Image 2 -->
+  <g class="matisse-large-flower">
+    <!-- Big Top Petal -->
+    <path d="M 150 150 C 130 50, 190 10, 150 5 C 100 0, 70 70, 150 150 Z" fill="#16A099" />
+    <!-- Big Right Petal -->
+    <path d="M 150 150 C 240 100, 290 140, 295 180 C 300 220, 210 210, 150 150 Z" fill="#16A099" />
+    <!-- Big Bottom Right Petal -->
+    <path d="M 150 150 C 200 230, 230 295, 180 295 C 130 295, 140 210, 150 150 Z" fill="#16A099" />
+    <!-- Big Bottom Left Petal -->
+    <path d="M 150 150 C 70 230, 5 270, 5 210 C 5 150, 90 140, 150 150 Z" fill="#16A099" />
+    <!-- Big Top Left Petal -->
+    <path d="M 150 150 C 70 80, 10 30, 50 10 C 90 -10, 120 70, 150 150 Z" fill="#16A099" />
+
+    <!-- Round Deep Violet Center -->
+    <circle cx="150" cy="150" r="24" fill="#532675" />
+  </g>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 80" fill="none" stroke="#532675" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Central flowing stem -->
+  <path d="M 20 40 C 120 20, 220 55, 300 40 C 380 25, 480 60, 580 40" stroke-opacity="0.85" />
+  
+  <!-- Leaf 1 (Top left) -->
+  <path d="M 100 30 C 90 10, 120 5, 125 25" stroke-opacity="0.75" />
+  <!-- Leaf 2 (Bottom left) -->
+  <path d="M 180 48 C 170 68, 200 75, 205 52" stroke-opacity="0.75" />
+  <!-- Center Decorative Leaf Pair -->
+  <path d="M 290 38 C 275 18, 305 10, 312 35 C 325 15, 345 25, 315 42" stroke-opacity="0.85" />
+  <!-- Leaf 4 (Top right) -->
+  <path d="M 410 32 C 400 12, 430 5, 435 28" stroke-opacity="0.75" />
+  <!-- Leaf 5 (Bottom right) -->
+  <path d="M 500 50 C 490 70, 520 75, 525 54" stroke-opacity="0.75" />
+  
+  <!-- Small botanical dots -->
+  <circle cx="128" cy="22" r="3" fill="#16A099" stroke="none" opacity="0.85" />
+  <circle cx="314" cy="33" r="3.5" fill="#532675" stroke="none" opacity="0.85" />
+  <circle cx="438" cy="25" r="3" fill="#16A099" stroke="none" opacity="0.85" />
+</svg>

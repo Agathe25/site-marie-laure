@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" fill="none">
+  <g class="botanical-branch">
+    <!-- Smooth organic stem -->
+    <path d="M150 380 Q 140 250, 180 150 Q 210 70, 190 20" stroke="#16A099" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.8"/>
+    <path d="M165 240 Q 220 200, 240 180" stroke="#16A099" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.7"/>
+    <path d="M155 170 Q 90 140, 60 120" stroke="#16A099" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.7"/>
+
+    <!-- Leaves -->
+    <path d="M150 300 C 100 290, 80 260, 110 250 C 140 240, 150 280, 150 300 Z" fill="#16A099" opacity="0.25"/>
+    <path d="M170 200 C 230 180, 250 140, 210 150 C 180 160, 170 190, 170 200 Z" fill="#16A099" opacity="0.25"/>
+    <path d="M140 140 C 90 110, 70 70, 100 90 C 130 110, 140 130, 140 140 Z" fill="#16A099" opacity="0.25"/>
+
+    <!-- Main Flower Top -->
+    <g transform="translate(190, 20) scale(0.6)">
+      <path d="M0 -40 C -15 -80, 15 -80, 0 -40 Z" fill="#16A099"/>
+      <path d="M35 -15 C 75 -30, 75 0, 35 -15 Z" fill="#16A099"/>
+      <path d="M25 30 C 50 65, 20 75, 25 30 Z" fill="#16A099"/>
+      <path d="M-25 30 C -50 65, -20 75, -25 30 Z" fill="#16A099"/>
+      <path d="M-35 -15 C -75 -30, -75 0, -35 -15 Z" fill="#16A099"/>
+      <circle cx="0" cy="0" r="16" fill="#532675"/>
+    </g>
+
+    <!-- Flower Middle Right -->
+    <g transform="translate(240, 180) scale(0.55)">
+      <path d="M0 -40 C -15 -80, 15 -80, 0 -40 Z" fill="#16A099"/>
+      <path d="M35 -15 C 75 -30, 75 0, 35 -15 Z" fill="#16A099"/>
+      <path d="M25 30 C 50 65, 20 75, 25 30 Z" fill="#16A099"/>
+      <path d="M-25 30 C -50 65, -20 75, -25 30 Z" fill="#16A099"/>
+      <path d="M-35 -15 C -75 -30, -75 0, -35 -15 Z" fill="#16A099"/>
+      <circle cx="0" cy="0" r="16" fill="#532675"/>
+    </g>
+
+    <!-- Flower Middle Left -->
+    <g transform="translate(60, 120) scale(0.5)">
+      <path d="M0 -40 C -15 -80, 15 -80, 0 -40 Z" fill="#16A099"/>
+      <path d="M35 -15 C 75 -30, 75 0, 35 -15 Z" fill="#16A099"/>
+      <path d="M25 30 C 50 65, 20 75, 25 30 Z" fill="#16A099"/>
+      <path d="M-25 30 C -50 65, -20 75, -25 30 Z" fill="#16A099"/>
+      <path d="M-35 -15 C -75 -30, -75 0, -35 -15 Z" fill="#16A099"/>
+      <circle cx="0" cy="0" r="16" fill="#532675"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 550" fill="none">
+  <!-- Matisse Organic Flower with very wide, plump, thick petals (Matching exact attachment model) -->
+  <g class="wide-petals-flower">
+    <!-- Center purple circle at (450, 160) -->
+    
+    <!-- Long Wide Top-Left Petal -->
+    <path d="M 450 160 C 330 0, 150 -50, 20 -10 C -40 20, 80 140, 450 160 Z" fill="#16A099"/>
+    
+    <!-- Plump Upper Top-Left Lobe -->
+    <path d="M 450 160 C 340 10, 360 -80, 480 -80 C 560 -80, 500 40, 450 160 Z" fill="#16A099"/>
+
+    <!-- Wide Top-Right Lobe -->
+    <path d="M 450 160 C 520 20, 670 -40, 710 30 C 740 90, 580 120, 450 160 Z" fill="#16A099"/>
+
+    <!-- Plump Right Lobe -->
+    <path d="M 450 160 C 560 140, 730 170, 720 330 C 700 430, 550 280, 450 160 Z" fill="#16A099"/>
+
+    <!-- Thick Bottom-Right Lobe -->
+    <path d="M 450 160 C 580 250, 680 500, 530 550 C 420 580, 460 360, 450 160 Z" fill="#16A099"/>
+
+    <!-- Wide Bottom Lobe -->
+    <path d="M 450 160 C 430 320, 470 540, 290 540 C 200 540, 330 350, 450 160 Z" fill="#16A099"/>
+
+    <!-- Very Wide Bottom-Left Plump Lobe -->
+    <path d="M 450 160 C 300 230, 120 340, 170 480 C 220 560, 370 380, 450 160 Z" fill="#16A099"/>
+
+    <!-- Deep Purple Center Circle -->
+    <circle cx="450" cy="160" r="34" fill="#532675"/>
+  </g>
+</svg>

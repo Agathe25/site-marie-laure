@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog & Recherche d'Articles Thérapeutiques IFS & IR | Marie-Laure Bergier</title>
+  <meta name="description" content="Recherchez un article ou posez votre question sur la thérapie IFS, l'Intelligence Relationnelle (IR), le trauma et l'anxiété avec le moteur de recherche du blog de Marie-Laure Bergier.">
+  <meta property="og:title" content="Blog & Recherche d'Articles Thérapeutiques IFS & IR | Marie-Laure Bergier">
+  <meta property="og:description" content="Moteur de recherche d'articles et réflexions thérapeutiques sur la psychothérapie IFS, IR, la théorie polyvagale et le traitement du trauma à Besançon.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="./src/assets/svg/micro-flower.svg">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="./src/css/style.css">
+  
+  <style>
+    .blog-hero-header {
+      padding-top: 9.5rem;
+      padding-bottom: 3.5rem;
+      text-align: center;
+      background-color: var(--bg-main);
+      position: relative;
+    }
+    
+    .blog-intro-text {
+      max-width: 780px;
+      margin: 1rem auto 0 auto;
+      font-size: 1.12rem;
+      line-height: 1.75;
+      color: var(--text-muted);
+    }
+    
+    .blog-grid-section {
+      padding: 1rem 0 6rem 0;
+    }
+    
+    .no-results-box {
+      display: none;
+      text-align: center;
+      padding: 4rem 2rem;
+      background-color: var(--surface-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-2xl);
+      max-width: 650px;
+      margin: 2rem auto;
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .no-results-title {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      color: var(--accent-eggplant);
+      margin-bottom: 0.85rem;
+    }
+    
+    .no-results-desc {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-bottom: 1.8rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Header -->
+  <header class="site-header" id="header">
+    <div class="container">
+      <div class="header-inner">
+        <!-- Brand Logo with Title Micro-Flower Icon -->
+        <a href="./index.html#accueil" class="brand-logo" aria-label="Marie-Laure Bergier Accueil">
+          <img src="./src/assets/svg/micro-flower.svg" style="width: 32px; height: 32px; flex-shrink: 0;" alt="" aria-hidden="true">
+          <div class="brand-text-group">
+            <span class="brand-name">Marie-Laure Bergier</span>
+            <span class="brand-subtitle">Psychopraticienne IFS & IR</span>
+          </div>
+        </a>
+
+        <button class="mobile-nav-toggle" aria-label="Menu principal" aria-expanded="false">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+        <nav class="main-nav" aria-label="Navigation principale">
+          <ul class="nav-links">
+            <li><a href="./index.html#accueil" class="nav-link">Accueil</a></li>
+            <li><a href="./index.html#apropos" class="nav-link">Mon approche</a></li>
+            <li><a href="./index.html#lesmodeles" class="nav-link">Les modèles</a></li>
+            <li><a href="./index.html#faq" class="nav-link">FAQ</a></li>
+            <li><a href="./index.html#tarif" class="nav-link">Tarifs</a></li>
+            <li><a href="./blog.html" class="nav-link active">Blog</a></li>
+            <li><a href="./index.html#contact" class="nav-link">Contact</a></li>
+          </ul>
+          <a href="./index.html#contact" class="btn btn-primary">Prendre RDV</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    
+    <!-- Blog Hero Header with Search Bar -->
+    <section class="blog-hero-header">
+      <div class="container">
+        <div class="section-header" style="margin-bottom: 0;">
+          <span class="section-subtitle">Ressources & Eclairages Thérapeutiques</span>
+          <h1 class="section-title section-title-with-flowers" style="font-size: clamp(1.8rem, 3.2vw, 2.9rem); white-space: nowrap;">
+            <img src="./src/assets/svg/micro-flower.svg" class="micro-flower-icon micro-flower-left" alt="" aria-hidden="true">
+            Blog & Conseils Thérapeutiques
+            <img src="./src/assets/svg/micro-flower.svg" class="micro-flower-icon micro-flower-right" alt="" aria-hidden="true">
+          </h1>
+          <p class="blog-intro-text">
+            Bienvenue sur mon espace de partage. Vous y trouverez des éclairages sur la psychothérapie <a href="./index.html#lesmodeles" style="color: var(--accent-teal); font-weight: 700;">IFS (Internal Family Systems)</a>, l'<a href="./index.html#lesmodeles" style="color: var(--accent-teal); font-weight: 700;">Intelligence Relationnelle® (IR)</a>, la <strong>théorie polyvagale</strong> et des clés concrètes pour avancer vers la libération des traumas.
+          </p>
+
+          <!-- Blog Interactive Search Bar Component -->
+          <div class="blog-search-wrapper" style="max-width: 720px; margin: 2.2rem auto 0 auto; position: relative;">
+            <div class="blog-search-bar" style="display: flex; align-items: center; background: #FFFFFF; border: 2px solid var(--border-subtle); border-radius: var(--radius-pill); padding: 0.45rem 0.75rem 0.45rem 1.4rem; box-shadow: var(--shadow-sm); transition: all 0.3s ease;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent-teal)" stroke-width="2.2" style="margin-right: 0.75rem; flex-shrink: 0;">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input type="text" id="blogSearchInput" placeholder="Posez une question ou tapez un mot-clé (ex: IFS, trauma, anxiété, différence psy...)" style="width: 100%; border: none; outline: none; background: transparent; font-family: var(--font-sans); font-size: 1.02rem; color: var(--text-main);">
+              <button type="button" id="clearSearchBtn" style="display: none; background: none; border: none; cursor: pointer; color: var(--text-light); padding: 0.5rem; font-size: 1.1rem;" aria-label="Effacer la recherche">✕</button>
+            </div>
+
+            <!-- Quick Filter Keyword Pills -->
+            <div class="blog-quick-tags" style="display: flex; align-items: center; justify-content: center; gap: 0.6rem; margin-top: 1.25rem; flex-wrap: wrap;">
+              <span style="font-size: 0.82rem; font-weight: 600; color: var(--text-light);">Idées de recherche :</span>
+              <button type="button" class="quick-tag-btn" data-query="différence psy">Différence Psy</button>
+              <button type="button" class="quick-tag-btn" data-query="IFS">IFS</button>
+              <button type="button" class="quick-tag-btn" data-query="trauma">Trauma</button>
+              <button type="button" class="quick-tag-btn" data-query="attachement">Attachement</button>
+              <button type="button" class="quick-tag-btn" data-query="anxiété">Anxiété</button>
+              <button type="button" class="quick-tag-btn" data-query="burnout">Burnout</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Grid Section (10 High-Quality Articles) -->
+    <section class="blog-grid-section">
+      <div class="container">
+        
+        <!-- No Results Box -->
+        <div class="no-results-box" id="noResultsMsg">
+          <h3 class="no-results-title">Aucun article ne correspond à votre recherche</h3>
+          <p class="no-results-desc">Essayez un autre mot-clé ou consultez l'ensemble de nos conseils thérapeutiques ci-dessous.</p>
+          <button type="button" class="btn btn-outline" id="resetSearchBtn">Réinitialiser la recherche</button>
+        </div>
+
+        <div class="blog-cards-grid" id="blogCardsContainer">
+          
+          <!-- Article 1 -->
+          <article class="blog-card">
+            <div>
+              <div class="blog-card-meta">
+                <span class="blog-card-tag">Guide & Démarche</span>
+                <time datetime="2026-08-13" class="blog-card-date">13 Août 2026</time>
+              </div>
+              <h2 class="blog-card-title">
+                <a href="./article-1-difference-psy-psychopraticien.html" style="color: inherit; text-decoration: none;">Psychologue, Psychiatre ou Psychopraticien : Quelles différences et qui consulter ?</a>
+              </h2>
+              <p class="blog-card-excerpt">
+                Découvrez les rôles respectifs du psychiatre, du psychologue et la démarche spécifique de la psychopraticienne en thérapies IFS et IR pour bien choisir votre accompagnement à Besançon.
+              </p>
+            </div>
+            <div class="blog-card-footer">
+              <a href="./article-1-difference-psy-psychopraticien.html" class="blog-read-more-btn">
+                <span>Lire l'article</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 2 -->
+          <article class="blog-card">
+            <div>
+              <div class="blog-card-meta">
+                <span class="blog-card-tag">IFS & Système Intérieur</span>
+                <time datetime="2026-08-05" class="blog-card-date">05 Août 2026</time>
+              </div>
+              <h2 class="blog-card-title">
+                <a href="./article-2-ifs-apprivoiser-parties-interieures.html" style="color: inherit; text-decoration: none;">Comprendre la thérapie IFS : Comment apprivoiser ses différentes parties intérieures ?</a>
+              </h2>
+              <p class="blog-card-excerpt">
+                Découvrez comment le modèle IFS (Internal Family Systems) permet d'accueillir avec curiosité et bienveillance vos émotions, vos protecteurs et de restaurer l'harmonie intérieure.
+              </p>
+            </div>
+            <div class="blog-card-footer">
+              <a href="./article-2-ifs-apprivoiser-parties-interieures.html" class="blog-read-more-btn">
+                <span>Lire l'article</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 3 -->
+          <article class="blog-card">
+            <div>
+              <div class="blog-card-meta">
+                <span class="blog-card-tag">IR & Neurobiologie</span>
+                <time datetime="2026-07-28" class="blog-card-date">28 Juillet 2026</time>
+              </div>
+              <h2 class="blog-card-title">
+                <a href="./article-template.html" style="color: inherit; text-decoration: none;">L’Intelligence Relationnelle® (IR) et la Théorie Polyvagale : Se libérer du trauma par le corps</a>
+              </h2>
+              <p class="blog-card-excerpt">
+                Comment la corégulation thérapeutique et la prise en compte du système nerveux autonome permettent-elles de débloquer les états d'anxiété chronique et de trauma complexe ?
+              </p>
+            </div>
+            <div class="blog-card-footer">
+              <a href="./article-template.html" class="blog-read-more-btn">
+                <span>Lire l'article</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 4 -->
+          <article class="blog-card">
+            <div>
+              <div class="blog-card-meta">
+                <span class="blog-card-tag">Attachement & Relations</span>
+                <time datetime="2026-07-15" class="blog-card-date">15 Juillet 2026</time>
+              </div>
+              <h2 class="blog-card-title">
+                <a href="./article-template.html" style="color: inherit; text-decoration: none;">Blessures d'attachement et schémas répétitifs : Retrouver la sécurité relationnelle</a>
+              </h2>
+              <p class="blog-card-excerpt">
+                Comprendre l'impact des premiers liens d'attachement dans vos relations d'adulte et apprendre à développer un attachement sécure avec vous-même et avec votre entourage.
+              </p>
+            </div>
+            <div class="blog-card-footer">
+              <a href="./article-template.html" class="blog-read-more-btn">
+                <span>Lire l'article</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 5 -->
+          <article class="blog-card">
+            <div>
+              <div class="blog-card-meta">
+                <span class="blog-card-tag">Trauma & Somatique</span>
+                <time datetime="2026-07-02" class="blog-card-date">02 Juillet 2026</time>
+              </div>
+              <h2 class="blog-card-title">
+                <a href="./article-template.html" style="color: inherit; text-decoration: none;">Le corps n'oublie rien : Comment la mémoire traumatique s’imprime en nous</a>
+              </h2>
+              <p class="blog-card-excerpt">
+                Pourquoi la parole seule ne suffit pas toujours à défaire un trauma ? Explications neurobiologiques sur la mémoire somatique et l'apaisement du système neurophysiologique.
+              </p>
+            </div>
+            <div class="blog-card-footer">
+              <a href="./article-template.html" class="blog-read-more-btn">
+                <span>Lire l'article</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 6 -->
+          <article class="blog-card">
+            <div>
+              <div class="blog-card-meta">
+                <span class="blog-card-tag">Émotions & Anxiété</span>
+                <time datetime="2026-06-18" class="blog-card-date">18 Juin 2026</time>
+              </div>
+              <h2 class="blog-card-title">
+                <a href="./article-template.html" style="color: inherit; text-decoration: none;">Crises d'angoisse et émotions envahissantes : Écouter la voix de nos protecteurs</a>
+              </h2>
+              <p class="blog-card-excerpt">
+                Au lieu de lutter contre l'anxiété, apprenez à comprendre ce que vos parties protectrices cherchent à exprimer et comment instaurer un climat intérieur serein.
+              </p>
+            </div>
+            <div class="blog-card-footer">
+              <a href="./article-template.html" class="blog-read-more-btn">
+                <span>Lire l'article</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 7 -->
+          <article class="blog-card">
+            <div>
+              <div class="blog-card-meta">
+                <span class="blog-card-tag">Burnout & Limites</span>
+                <time datetime="2026-06-04" class="blog-card-date">04 Juin 2026</time>
+              </div>
+              <h2 class="blog-card-title">
+                <a href="./article-template.html" style="color: inherit; text-decoration: none;">Burnout et épuisement professionnel : Reconstruire une relation sécure avec ses limites</a>
+              </h2>
+              <p class="blog-card-excerpt">
+                Des soins palliatifs à la psychopratique : comment déceler l'épuisement, écouter les signaux d’alerte du corps et apprendre à poser des limites saines sans culpabilité.
+              </p>
+            </div>
+            <div class="blog-card-footer">
+              <a href="./article-template.html" class="blog-read-more-btn">
+                <span>Lire l'article</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 8 -->
+          <article class="blog-card">
+            <div>
+              <div class="blog-card-meta">
+                <span class="blog-card-tag">Deuil & Reconstruction</span>
+                <time datetime="2026-05-20" class="blog-card-date">20 Mai 2026</time>
+              </div>
+              <h2 class="blog-card-title">
+                <a href="./article-template.html" style="color: inherit; text-decoration: none;">Traverser le deuil et les grandes étapes de transition : Un chemin vers soi</a>
+              </h2>
+              <p class="blog-card-excerpt">
+                Perte d'un proche, séparation ou tournant de vie : comment l'accompagnement relationnel soutient la personne dans le processus naturel de deuil et de reconstruction.
+              </p>
+            </div>
+            <div class="blog-card-footer">
+              <a href="./article-template.html" class="blog-read-more-btn">
+                <span>Lire l'article</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 9 -->
+          <article class="blog-card">
+            <div>
+              <div class="blog-card-meta">
+                <span class="blog-card-tag">Estime & Compassion</span>
+                <time datetime="2026-05-06" class="blog-card-date">06 Mai 2026</time>
+              </div>
+              <h2 class="blog-card-title">
+                <a href="./article-template.html" style="color: inherit; text-decoration: none;">De la critique intérieure à l'autocompassion : Le pouvoir transformateur du Soi</a>
+              </h2>
+              <p class="blog-card-excerpt">
+                Comment transformer son juge intérieur exigant en un allié bienveillant grâce à la présence apaisante et curieuse du Soi (Self) en psychothérapie IFS.
+              </p>
+            </div>
+            <div class="blog-card-footer">
+              <a href="./article-template.html" class="blog-read-more-btn">
+                <span>Lire l'article</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 10 -->
+          <article class="blog-card">
+            <div>
+              <div class="blog-card-meta">
+                <span class="blog-card-tag">Relations & Co-régulation</span>
+                <time datetime="2026-04-22" class="blog-card-date">22 Avril 2026</time>
+              </div>
+              <h2 class="blog-card-title">
+                <a href="./article-template.html" style="color: inherit; text-decoration: none;">Sortir des conflits de couple et de famille : La magie de la corégulation</a>
+              </h2>
+              <p class="blog-card-excerpt">
+                Comprendre pourquoi nous réagissons parfois au quart de tour face à nos proches et comment l'Intelligence Relationnelle® restaure le dialogue et l'harmonie affective.
+              </p>
+            </div>
+            <div class="blog-card-footer">
+              <a href="./article-template.html" class="blog-read-more-btn">
+                <span>Lire l'article</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Column -->
+        <div class="footer-brand-col">
+          <a href="./index.html#accueil" class="footer-brand-title">
+            <img src="./src/assets/svg/micro-flower.svg" class="footer-brand-flower" alt="" aria-hidden="true">
+            <span>Marie-Laure Bergier</span>
+          </a>
+          <span class="footer-brand-tagline">Psychopraticienne IFS & IR à Besançon</span>
+          <p class="footer-brand-desc">
+            Psychopraticienne spécialisée en modèles IFS (Internal Family Systems) & IR (Intelligence Relationnelle®).<br>
+            Accompagnement individuel vers la libération et le mieux-être.
+          </p>
+        </div>
+
+        <!-- Navigation Column -->
+        <div class="footer-nav-col">
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="./index.html#accueil">Accueil</a></li>
+            <li><a href="./index.html#apropos">Mon approche</a></li>
+            <li><a href="./index.html#lesmodeles">Les modèles (IFS & IR)</a></li>
+            <li><a href="./index.html#faq">Questions fréquentes</a></li>
+            <li><a href="./index.html#tarif">Tarifs & Modalités</a></li>
+            <li><a href="./blog.html">Blog & Conseils</a></li>
+            <li><a href="./index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Coordonnées Column -->
+        <div class="footer-contact-col">
+          <h4 class="footer-heading">Coordonnées</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <span class="contact-item-icon">📍</span>
+              <span><strong>Ville :</strong> Besançon (Doubs)</span>
+            </li>
+            <li>
+              <span class="contact-item-icon">✉️</span>
+              <span><strong>Email :</strong> <a href="mailto:marie.laure.bergier@gmail.com" class="footer-link">marie.laure.bergier@gmail.com</a></span>
+            </li>
+            <li>
+              <span class="contact-item-icon">📞</span>
+              <span><strong>Téléphone :</strong> <a href="tel:+33681084060" class="footer-link">+33 6 81 08 40 60</a></span>
+            </li>
+            <li>
+              <span class="contact-item-icon">🗓️</span>
+              <span><strong>Présentiel :</strong> Les jeudis</span>
+            </li>
+            <li>
+              <span class="contact-item-icon">💻</span>
+              <span><strong>Visio :</strong> Du lundi au vendredi</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div class="footer-copyright">
+          &copy; 2026 Marie-Laure Bergier - Psychopraticienne à Besançon. Tous droits réservés.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="./mentions-legales.html">Mentions légales</a>
+          <a href="#header" class="back-to-top-btn" aria-label="Retour en haut de page">
+            <span>Haut de page</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="12" y1="19" x2="12" y2="5"></line>
+              <polyline points="5 12 12 5 19 12"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="./src/js/main.js"></script>
+
+  <!-- Live Blog Search Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const searchInput = document.getElementById('blogSearchInput');
+      const clearBtn = document.getElementById('clearSearchBtn');
+      const blogCards = document.querySelectorAll('#blogCardsContainer .blog-card');
+      const noResultsMsg = document.getElementById('noResultsMsg');
+      const resetBtn = document.getElementById('resetSearchBtn');
+      const quickTagBtns = document.querySelectorAll('.quick-tag-btn');
+
+      if (!searchInput || !blogCards.length) return;
+
+      function filterArticles(query) {
+        const cleanQuery = query.toLowerCase().trim();
+        let visibleCount = 0;
+
+        blogCards.forEach(card => {
+          const title = card.querySelector('.blog-card-title')?.textContent.toLowerCase() || '';
+          const tag = card.querySelector('.blog-card-tag')?.textContent.toLowerCase() || '';
+          const excerpt = card.querySelector('.blog-card-excerpt')?.textContent.toLowerCase() || '';
+          
+          const isMatch = title.includes(cleanQuery) || tag.includes(cleanQuery) || excerpt.includes(cleanQuery);
+          
+          if (isMatch) {
+            card.style.display = 'flex';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        if (clearBtn) {
+          clearBtn.style.display = cleanQuery ? 'block' : 'none';
+        }
+
+        if (noResultsMsg) {
+          noResultsMsg.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+      }
+
+      searchInput.addEventListener('input', function(e) {
+        filterArticles(e.target.value);
+      });
+
+      if (clearBtn) {
+        clearBtn.addEventListener('click', function() {
+          searchInput.value = '';
+          filterArticles('');
+          searchInput.focus();
+        });
+      }
+
+      if (resetBtn) {
+        resetBtn.addEventListener('click', function() {
+          searchInput.value = '';
+          filterArticles('');
+          searchInput.focus();
+        });
+      }
+
+      quickTagBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const tagQuery = btn.getAttribute('data-query');
+          searchInput.value = tagQuery;
+          filterArticles(tagQuery);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
