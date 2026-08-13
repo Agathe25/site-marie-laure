@@ -1908,11 +1908,11 @@ a:hover {
 .hero-bg-corner-flower-desktop {
   display: block;
   position: absolute;
-  top: -130px;
-  right: -290px;
-  width: 750px;
+  top: -150px;
+  right: -330px;
+  width: 850px;
   height: auto;
-  opacity: 0.95;
+  opacity: 0.92;
   pointer-events: none;
   z-index: 1;
 }
