@@ -610,13 +610,17 @@ a:hover {
 
 .hero-bg-corner-flower-desktop {
   display: block;
-  top: -80px;
-  right: -30px;
-  transform: translate(12%, 0) rotate(18deg);
-  transform-origin: 61% 23%;
-  width: clamp(920px, 72vw, 1300px);
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(38%, -30%);
+  width: clamp(750px, 70vw, 1100px);
   height: auto;
-  opacity: 0.35; /* Présence subtile et élégante en filigrane */
+  opacity: 0.85;
+  pointer-events: none;
+  z-index: 1;
+  user-select: none;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 .hero-bg-corner-flower-mobile {
