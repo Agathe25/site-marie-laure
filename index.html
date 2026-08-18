@@ -38,13 +38,19 @@
 
         <nav class="main-nav" aria-label="Navigation principale">
           <ul class="nav-links">
-            <li><a href="#accueil" class="nav-link active">Accueil</a></li>
+            <li>
+              <a href="#accueil" class="nav-link nav-link-home active" aria-label="Accueil" title="Accueil">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-home-icon">
+                  <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                  <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+              </a>
+            </li>
             <li><a href="#apropos" class="nav-link">Mon approche</a></li>
             <li><a href="#lesmodeles" class="nav-link">Les modèles</a></li>
             <li><a href="#faq" class="nav-link">FAQ</a></li>
             <li><a href="#tarif" class="nav-link">Tarifs</a></li>
             <li><a href="./blog.html" class="nav-link">Blog</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
           </ul>
           <a href="#contact" class="btn btn-primary">Prendre RDV</a>
         </nav>
@@ -56,29 +62,33 @@
     
     <!-- Hero Section -->
     <section class="section hero-section" id="accueil">
-      <!-- Mobile Background Flower -->
+      <!-- Grande fleur décorative d'arrière-plan (Format Ordinateur) -->
+      <img src="./src/assets/svg/hero-top-right-flower-hd.svg" class="hero-bg-corner-flower hero-bg-corner-flower-desktop" alt="" aria-hidden="true">
+      
+      <!-- Fleur décorative d'arrière-plan (Format Mobile) -->
       <img src="./src/assets/svg/hero-top-right-flower-hd.svg" class="hero-bg-corner-flower hero-bg-corner-flower-mobile" alt="" aria-hidden="true">
 
       <div class="container">
         <div class="hero-grid">
           <div class="hero-content">
-            <div class="hero-pill-badge">
-              ACCOMPAGNEMENT THÉRAPEUTIQUE
-            </div>
+            <h1 class="hero-h1-title">Accompagnement thérapeutique IFS &amp; IR à Besançon</h1>
+            <h2 class="hero-h2-subtitle">Marie-Laure Bergier</h2>
 
-            <h1 class="hero-h1-title">Marie-Laure Bergier</h1>
-            <h2 class="hero-h2-subtitle">Psychopraticienne en IFS et en IR</h2>
+            <!-- Phrase d'accroche sans encadré, valorisée par la typographie -->
+            <p class="hero-catchphrase-text">
+              Qui n’a jamais ressenti le <b>poids d’un passé non résolu</b>,<br class="hero-br-desktop">
+              ou la sensation d’être <b>bloqué à un carrefour de sa vie</b> ?
+            </p>
 
             <div class="hero-text-content">
-              <p><span style="font-weight: 400;">Qui n’a jamais ressenti le <strong>poids d’un passé non résolu</strong>, ou la sensation d’être <strong>bloqué à un carrefour de sa vie</strong> ? </span></p>
               <p><span style="font-weight: 400;"><b>L’accompagnement thérapeutique individuel</b> que je propose, alliant les modèles <a href="#lesmodeles" style="color: var(--accent-teal); font-weight: 700;">IR</a> (l’Intelligence Relationnelle) et <a href="#lesmodeles" style="color: var(--accent-teal); font-weight: 700;">IFS</a> (Système Familial Intérieur), <b>traite le trauma</b> de manière <b>douce</b> et <b>graduelle.</b></span></p>
               <p><span style="font-weight: 400;">Ces modèles de thérapie permettent aussi de <b>débloquer</b> des <b>situations répétitives</b> ou <b>figées</b> et <b>amènent</b> la personne accompagnée à trouver son propre <b>chemin de guérison</b>. Ainsi, ils ouvrent la voie vers une <b>libération profonde</b> afin de vivre une <b>vie pleine</b> et <b>consciente.</b></span></p>
             </div>
 
-            <!-- Mobile Portrait Photo Placement (Apparaît AVANT les boutons Me contacter & Découvrir mon approche) -->
+            <!-- Mobile Portrait Photo Placement -->
             <div class="hero-photo-wrapper hero-photo-mobile">
-              <div class="hero-photo-container">
-                <img src="https://psychopraticienne-besancon.fr/wp-content/uploads/2024/03/MLB-Carre-1017x1024.png" alt="Marie-Laure Bergier - Psychopraticienne en IFS et IR à Besançon" class="hero-photo-img" loading="eager">
+              <div class="hero-photo-blob">
+                <img src="https://psychopraticienne-besancon.fr/wp-content/uploads/2024/03/MLB-Carre-1017x1024.png" alt="Marie-Laure Bergier - Accompagnement thérapeutique IFS & IR à Besançon" class="hero-photo-img" loading="eager">
               </div>
             </div>
 
@@ -88,12 +98,45 @@
             </div>
           </div>
 
-          <!-- Desktop Portrait Photo Placement (Emplacement exactement validé cadrant la photo sur ordinateur) -->
+          <!-- Desktop Portrait Photo Placement -->
           <div class="hero-photo-wrapper hero-photo-desktop">
-            <img src="./src/assets/svg/hero-top-right-flower-hd.svg" class="hero-bg-corner-flower hero-bg-corner-flower-desktop" alt="" aria-hidden="true">
+            <div class="hero-photo-blob">
+              <img src="https://psychopraticienne-besancon.fr/wp-content/uploads/2024/03/MLB-Carre-1017x1024.png" alt="Marie-Laure Bergier - Accompagnement thérapeutique IFS & IR à Besançon" class="hero-photo-img" loading="eager">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <div class="hero-photo-container">
-              <img src="https://psychopraticienne-besancon.fr/wp-content/uploads/2024/03/MLB-Carre-1017x1024.png" alt="Marie-Laure Bergier - Psychopraticienne en IFS et IR à Besançon" class="hero-photo-img" loading="eager">
+    <!-- Section Champs d'accompagnement -->
+    <section class="section champs-section" id="problematiques">
+      <div class="container">
+        <div class="champs-box-violet">
+          <div class="champs-header">
+            <h2 class="champs-title">Champs d’accompagnement</h2>
+            <p class="champs-subtitle">Un accompagnement thérapeutique adapté pour vous aider à traverser et apaiser vos difficultés :</p>
+          </div>
+
+          <div class="champs-items-grid">
+            <div class="champs-item">
+              <span class="champs-dot" aria-hidden="true"></span>
+              <span class="champs-text">Émotions envahissantes</span>
+            </div>
+            <div class="champs-item">
+              <span class="champs-dot" aria-hidden="true"></span>
+              <span class="champs-text">Stress &amp; Burn-out</span>
+            </div>
+            <div class="champs-item">
+              <span class="champs-dot" aria-hidden="true"></span>
+              <span class="champs-text">Schémas répétitifs</span>
+            </div>
+            <div class="champs-item">
+              <span class="champs-dot" aria-hidden="true"></span>
+              <span class="champs-text">Blessures d’enfance</span>
+            </div>
+            <div class="champs-item">
+              <span class="champs-dot" aria-hidden="true"></span>
+              <span class="champs-text">Difficultés relationnelles</span>
             </div>
           </div>
         </div>
@@ -105,9 +148,9 @@
       <div class="container">
         <!-- Header Centered "Mon Approche" flanked by two continuously rotating micro-flowers -->
         <div class="mon-approche-section-header">
-          <h2 class="mon-approche-title">
+          <h2 class="mon-approche-title mon-approche-title-with-flowers">
             <img src="./src/assets/svg/micro-flower.svg" class="micro-flower-icon micro-flower-left" alt="" aria-hidden="true">
-            Mon Approche
+            <span class="title-text-wrap">Mon Approche</span>
             <img src="./src/assets/svg/micro-flower.svg" class="micro-flower-icon micro-flower-right" alt="" aria-hidden="true">
           </h2>
         </div>
@@ -123,7 +166,7 @@
             <p><span style="font-weight: 400;">Autrement dit, il s'agit <strong>d’accompagner</strong>, de <strong>soutenir la personne</strong> sur un chemin intérieur qu’elle choisira d’explorer, pour qu’<strong>elle puisse redonner</strong> du <strong>sens à sa vie</strong> et vivre en <strong>adulte épanoui et libéré.</strong></span></p>
           </div>
 
-          <!-- Right Column: Citation Box with Elegant Typographic Quote Mark Icon -->
+          <!-- Right Column: Citation Box with Elegant Typographic Quote Mark Icon & Separate Violet Rumi Card -->
           <div class="quote-card-image3">
             <!-- Guillemets typographiques de haute qualité -->
             <svg class="quote-mark-icon" viewBox="0 0 100 100" fill="currentColor">
@@ -161,6 +204,11 @@
                 <circle cx="0" cy="0" r="16" stroke="currentColor" stroke-width="6"/>
               </g>
             </svg>
+
+            <!-- Petit bloc séparé violet explicatif sur l'auteur (Djalâl Ad-Dîn Rûmi) -->
+            <div class="rumi-bio-card">
+              <p>Grand poète et maître spirituel du XIII<sup>e</sup> siècle, dont les écrits universels célèbrent la transformation intérieure et l'écoute du cœur.</p>
+            </div>
           </div>
         </div>
 
@@ -273,9 +321,18 @@
               Mes formations
             </h4>
             <ul class="formations-list">
-              <li><strong>IR :</strong> <span style="font-weight: 400;">Formation niveau 1 et 2, Niveau avancé Psychopathologie, Trauma, Dissociation, Attachement et Formation continue d’approfondissement webinaire.</span></li>
-              <li><strong>IFS :</strong> <span style="font-weight: 400;">Formation niveau 1 et niveau 2 Approfondissement du modèle psychothérapeutique.</span></li>
-              <li><strong>IFIO :</strong> <span style="font-weight: 400;">Formation en Thérapie relationnelle et de couple.</span></li>
+              <li class="formation-item">
+                <a href="https://selftherapie.com/" target="_blank" rel="noopener noreferrer" class="formation-link" title="Visiter le site officiel Self Thérapie Formation (IR)"><strong>IR (Intelligence Relationnelle) par François Le Doze :</strong></a>
+                <span class="formation-desc">Formation niveau 1 et 2, Niveau avancé Psychopathologie, Trauma, Dissociation, Attachement et Formation continue d’approfondissement webinaire.</span>
+              </li>
+              <li class="formation-item">
+                <a href="https://selftherapie.com/le-modele-ifs/" target="_blank" rel="noopener noreferrer" class="formation-link" title="Découvrir le modèle IFS sur Self Thérapie Formation"><strong>IFS (Internal Family Systems) – Formation à Paris, Self Thérapie Formation :</strong></a>
+                <span class="formation-desc">Formation niveau 1 et niveau 2 Approfondissement du modèle psychothérapeutique.</span>
+              </li>
+              <li class="formation-item">
+                <strong class="formation-title-static">IFIO :</strong>
+                <span class="formation-desc">Formation en Thérapie relationnelle et de couple.</span>
+              </li>
             </ul>
           </div>
         </div>
@@ -290,7 +347,7 @@
           <span class="section-subtitle">Approches complémentaires</span>
           <h2 class="section-title section-title-with-flowers">
             <img src="./src/assets/svg/micro-flower.svg" class="micro-flower-icon micro-flower-left" alt="" aria-hidden="true">
-            Les modèles
+            <span class="title-text-wrap">Les modèles</span>
             <img src="./src/assets/svg/micro-flower.svg" class="micro-flower-icon micro-flower-right" alt="" aria-hidden="true">
           </h2>
         </div>
@@ -393,7 +450,7 @@
           <span class="section-subtitle">FAQ</span>
           <h2 class="section-title section-title-with-flowers">
             <img src="./src/assets/svg/micro-flower.svg" class="micro-flower-icon micro-flower-left" alt="" aria-hidden="true">
-            Questions fréquentes
+            <span class="title-text-wrap">Questions fréquentes</span>
             <img src="./src/assets/svg/micro-flower.svg" class="micro-flower-icon micro-flower-right" alt="" aria-hidden="true">
           </h2>
         </div>
@@ -458,38 +515,70 @@
               <p><span style="font-weight: 400;"><strong>Le modèle de thérapie</strong> que j’utilise est particulièrement <strong>efficace</strong> car il intègre à la fois les <strong>dimensions corporelle, émotionnelle et neuropsychologique</strong>. Il est fondé sur l’<strong>engagement</strong> du thérapeute et la <strong>qualité de la relation</strong> avec la <strong>personne accompagnée..</strong></span></p>
             </div>
           </div>
+
+          <!-- Item 4 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Les séances se font-elles en présentiel ou en visio ?</span>
+              <span class="faq-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-content">
+              <p><span style="font-weight: 400;">Les deux formats sont <strong>possibles et tout aussi propices pour cheminer</strong>. La <strong>visioconférence</strong> peut être très aidante, car elle vous permet de rester dans le <strong>confort et la sécurité de votre cocon</strong>, ce qui facilite parfois le lâcher-prise.</span></p>
+              <p><span style="font-weight: 400;">Le <strong>présentiel</strong> est, quant à lui, idéal pour les personnes qui ressentent un besoin plus fort d'<strong>ancrage et de contact humain</strong>. Nous choisissons ensemble ce qui vous correspond le mieux.</span></p>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Combien de temps dure une thérapie et de combien de séances aurai-je besoin ?</span>
+              <span class="faq-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-content">
+              <p><span style="font-weight: 400;">L'accompagnement est <strong>sur-mesure</strong>, la durée varie donc selon chaque personne. Je recommande généralement de prévoir <strong>3 premières séances</strong> pour évaluer ensemble si ma méthode et mon approche vous conviennent.</span></p>
+              <p><span style="font-weight: 400;">Le <strong>rythme habituel</strong> est d'une séance <strong>tous les 15 jours</strong> (ou plus selon vos besoins). Au fil du temps, à mesure que vous vous sentez mieux, nous pourrons <strong>espacer nos rencontres</strong> (par exemple, une fois par mois) jusqu'à ce que vous vous sentiez pleinement apaisé(e) et autonome.</span></p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Pricing Section (Cartes de Tarifs Informatives & Interactives au Survol, sans bouton Réserver) -->
+    <!-- Pricing Section (Tarifs, Modalités avec Icônes & Call To Action Prendre RDV) -->
     <section class="section" id="tarif">
       <div class="container">
         <div class="section-header">
           <span class="section-subtitle">Investissement pour soi</span>
           <h2 class="section-title section-title-with-flowers">
             <img src="./src/assets/svg/micro-flower.svg" class="micro-flower-icon micro-flower-left" alt="" aria-hidden="true">
-            Tarifs
+            <span class="title-text-wrap">Tarifs et Modalités</span>
             <img src="./src/assets/svg/micro-flower.svg" class="micro-flower-icon micro-flower-right" alt="" aria-hidden="true">
           </h2>
         </div>
 
         <div class="pricing-grid">
-          <!-- Card 1 -->
+          <!-- Card 1 : Première séance -->
           <div class="pricing-card">
             <div class="pricing-type">Première séance</div>
             <div class="pricing-amount">75 €</div>
             <div class="pricing-duration">1 h 30</div>
           </div>
 
-          <!-- Card 2 -->
+          <!-- Card 2 : Séances suivantes -->
           <div class="pricing-card">
             <div class="pricing-type">Séances suivantes</div>
             <div class="pricing-amount">70 €</div>
             <div class="pricing-duration">1 h</div>
           </div>
 
-          <!-- Card 3 -->
+          <!-- Card 3 : Étudiants -->
           <div class="pricing-card">
             <div class="pricing-type">Étudiants</div>
             <div class="pricing-amount">50 €</div>
@@ -497,9 +586,53 @@
           </div>
         </div>
 
+        <!-- Note explicative première séance en italique sous les 3 carrés -->
+        <p class="pricing-first-session-note">
+          <em>La première séance est un peu plus longue. Ce temps privilégié nous permet d'échanger en douceur, de faire mutuellement connaissance, et de prendre le temps de vous expliquer en détail les modèles avec lesquels je travaille (IR et IFS).</em>
+        </p>
+
+        <!-- Modalités de consultation avec icônes épurées -->
         <div class="pricing-modalities-box">
-          <p><span style="font-weight: 400;"><strong>En visio</strong> : règlement par virement uniquement</span></p>
-          <p><span style="font-weight: 400;"><strong>En présentiel</strong> : uniquement les jeudis, règlement par chèque ou espèces</span></p>
+          <div class="pricing-modalities-grid">
+            <!-- Modalité En Visio -->
+            <div class="pricing-modality-item">
+              <div class="modality-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M15 10l5-3v10l-5-3v-4z"></path>
+                  <rect x="2" y="6" width="13" height="12" rx="3"></rect>
+                </svg>
+              </div>
+              <div class="modality-content">
+                <span class="modality-title">En Visio</span>
+                <span class="modality-desc">Règlement par virement bancaire uniquement</span>
+              </div>
+            </div>
+
+            <!-- Modalité En Cabinet -->
+            <div class="pricing-modality-item">
+              <div class="modality-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="modality-content">
+                <span class="modality-title">En Cabinet</span>
+                <span class="modality-desc">Uniquement les jeudis à Besançon • Règlement par chèque ou espèces</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Call to Action : Prendre rendez-vous -->
+        <div class="pricing-cta-wrap">
+          <a href="#contact" class="btn btn-primary btn-pricing-cta">
+            <span>Prendre rendez-vous</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
         </div>
       </div>
     </section>
@@ -511,7 +644,7 @@
           <span class="section-subtitle">Derniers Articles & Conseils</span>
           <h2 class="section-title section-title-with-flowers">
             <img src="./src/assets/svg/micro-flower.svg" class="micro-flower-icon micro-flower-left" alt="" aria-hidden="true">
-            Le Blog Thérapeutique
+            <span class="title-text-wrap">Le Blog Thérapeutique</span>
             <img src="./src/assets/svg/micro-flower.svg" class="micro-flower-icon micro-flower-right" alt="" aria-hidden="true">
           </h2>
         </div>
@@ -627,7 +760,7 @@
         <div class="contact-sage-header">
           <h2 class="contact-sage-title contact-title-with-flowers">
             <img src="./src/assets/svg/micro-flower-white.svg" class="micro-flower-icon micro-flower-left" alt="" aria-hidden="true">
-            Me contacter
+            <span class="title-text-wrap">Me contacter</span>
             <img src="./src/assets/svg/micro-flower-white.svg" class="micro-flower-icon micro-flower-right" alt="" aria-hidden="true">
           </h2>
           <p class="contact-sage-subtitle">N'hésitez pas à me contacter pour toute question ou pour prendre un premier rendez-vous. Je vous répondrai dans les plus brefs délais.</p>

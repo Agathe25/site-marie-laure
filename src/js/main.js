@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
   initScrollStemAnimation();
   initFormationsZoom();
+  initRumiBioCardPop();
 });
 
 /* Header Scroll Glassmorphism */
@@ -165,10 +166,11 @@ function initSmoothScroll() {
   }, { passive: true });
 }
 
-/* Scroll-Driven Stem & Flower Growth Animation (Smooth on Desktop & Fully Active on Mobile) */
+/* Scroll-Driven Stem & Flower Growth Animation (Smooth on Desktop & Fast Responsive on Mobile) */
 function initScrollStemAnimation() {
   const stemPath = document.getElementById('growingStemPath');
   const container = document.querySelector('.cheminement-growth-container');
+  const stemCol = document.querySelector('.cheminement-growth-stem-column') || container;
   if (!stemPath || !container) return;
 
   const pathLength = stemPath.getTotalLength();
@@ -176,25 +178,23 @@ function initScrollStemAnimation() {
   stemPath.style.strokeDashoffset = pathLength;
 
   const elements = [
-    { id: 'leaf1Group', progressThreshold: 0.18 },
-    { id: 'leaf2Group', progressThreshold: 0.38 },
-    { id: 'leaf3Group', progressThreshold: 0.58 },
-    { id: 'budGroup', progressThreshold: 0.76 },
-    { id: 'flowerGroup', progressThreshold: 0.88 }
+    { id: 'leaf1Group', progressThreshold: 0.12 },
+    { id: 'leaf2Group', progressThreshold: 0.28 },
+    { id: 'leaf3Group', progressThreshold: 0.48 },
+    { id: 'budGroup', progressThreshold: 0.65 },
+    { id: 'flowerGroup', progressThreshold: 0.78 }
   ];
 
   const handleScroll = () => {
-    const rect = container.getBoundingClientRect();
+    const targetElem = window.innerWidth < 992 ? stemCol : container;
+    const rect = targetElem.getBoundingClientRect();
     const windowHeight = window.innerHeight;
     const isMobile = window.innerWidth < 992;
 
-    // Début de l'animation quand le haut du conteneur entre dans l'écran
-    const startY = windowHeight * (isMobile ? 0.85 : 0.75);
-    
-    // Sur ordinateur : progression douce et élégante étalée sur toute la hauteur
-    // Sur mobile : progression réactive adaptée au scroll tactile
-    const containerHeight = container.offsetHeight || 600;
-    const totalDistance = isMobile ? (containerHeight * 0.90) : (containerHeight + (windowHeight * 0.35));
+    // Déclenchement réactif dès l'entrée dans le viewport
+    const startY = windowHeight * (isMobile ? 0.90 : 0.80);
+    const elemHeight = targetElem.offsetHeight || 500;
+    const totalDistance = isMobile ? (elemHeight + (windowHeight * 0.15)) : (elemHeight + (windowHeight * 0.35));
     const currentDistance = startY - rect.top;
 
     let progress = currentDistance / totalDistance;
@@ -231,7 +231,27 @@ function initFormationsZoom() {
         card.classList.add('zoom-in');
       }
     });
-  }, { threshold: 0.15 });
+  }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
 
   observer.observe(card);
+}
+
+/* Intersection Observer for Rûmi Bio Card Pop-in with slight delay */
+function initRumiBioCardPop() {
+  const rumiCard = document.querySelector('.rumi-bio-card');
+  const quoteCard = document.querySelector('.mon-approche-quote-card');
+  if (!rumiCard) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          rumiCard.classList.add('pop-in');
+        }, 380); // Léger retard (380ms)
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  observer.observe(quoteCard || rumiCard);
 }
