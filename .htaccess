@@ -8,12 +8,16 @@ AddDefaultCharset UTF-8
 RewriteEngine On
 RewriteBase /
 
-# Redirect all old WordPress tags, categories, and archive URLs to homepage
+# 1. PURGE GOOGLE INDEX: Send 410 Gone status for old WordPress dummy tags, categories & archives so Google purges them immediately from Search
+RewriteCond %{REQUEST_URI} ^/(tag|category|author|esports|wp-json|feed)/ [NC]
+RewriteRule ^ - [G,L]
+
+# 2. Redirect any other old WordPress paths to index.html
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(tag|category|author|wp-content|wp-includes|2020|2021|2022|2023|2024|2025|2026)/.*$ /index.html [R=301,L]
+RewriteRule ^(wp-content|wp-includes|2020|2021|2022|2023|2024|2025|2026)/.*$ /index.html [R=301,L]
 
-# For any broken link or non-existent page, fallback smoothly to index.html
+# 3. For any broken link or non-existent page, fallback smoothly to index.html
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.html [L]
